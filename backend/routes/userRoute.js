@@ -20,6 +20,4 @@ router.route("/password/update").put(isAuthenticatedUser,updatePassword);
 
 router.route("/me/update").put(isAuthenticatedUser,updateProfile);
 
-
-
 module.exports=router;
