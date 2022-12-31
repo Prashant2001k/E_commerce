@@ -142,7 +142,7 @@ exports.resetPassword=catchAsyncErrors(async(req,res,next)=>{
 
 
 
-//Get Uer Detail
+//Get User Detail
 exports.getUserDetails=catchAsyncErrors(async(req,res,next)=>{
 
     const user= await User.findById(req.user.id);
@@ -263,5 +263,9 @@ exports.deleteUser= catchAsyncErrors(async(req,res,next)=>{
 
     res.status(200).json({
         success:true,
+        message:"User Deleted Successfully"
     });
-})
+});
+
+
+
