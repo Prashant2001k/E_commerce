@@ -15,9 +15,11 @@ app.use(cookieParser());
 //route Imports
 const product =require("./routes/productRoute");
 const user=require("./routes/userRoute");
+const order=require("./routes/orderRoute");
 
 app.use("/api/vi",product);
 app.use("/api/vi",user);
+app.use("/api/vi",order);
 
 //Middleware for Error
 app.use(errorMiddleware);
