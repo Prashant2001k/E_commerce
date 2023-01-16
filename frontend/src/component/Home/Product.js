@@ -6,9 +6,9 @@ import ReactStars from  "react-rating-stars-component";
 const options={
   edit:false,
   color:"rgb(210, 210, 210)",
-  activeColor:"#tomato",
+  activeColor:"#ffe234",
   size:window.innerWidth <600 ? 20 :25,
-  value:2.5,
+  value:2.5,  
   isHalf:true,
 };
 
