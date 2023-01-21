@@ -7,6 +7,8 @@ import {useEffect} from 'react';
 
 import Home from "./component/Home/Home.js"
 import ProductDetails from './component/Product/ProductDetails';
+import Products from './component/Product/Products.js';
+import Search from './component/Product/Search.js';
 
 function App() {
 
@@ -24,6 +26,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/product/:id" component={ProductDetails}/>
+        <Route exact path="/products" component={Products}/>
+        <Route path="/products/:keyword" component={Products}/>
+        <Route exact path="/search" component={Search}/>
         {/* <Route path="/" element={<Home/>}/> */}
       </Switch>
       <Footer/>

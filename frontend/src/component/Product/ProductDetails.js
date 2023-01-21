@@ -3,6 +3,7 @@ import Carousel from "react-material-ui-carousel";
 import "./ProductDetails.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
+    clearErrors,
     getProductDetails,
 } from "../../actions/productAction";
 import ReactStars from  "react-rating-stars-component";
@@ -17,8 +18,12 @@ const ProductDetails = ({ match }) => {
     const dispatch = useDispatch();
     
     useEffect(() => {
+        if(error){
+            alert.error(error);
+            dispatch(clearErrors());
+        }
         dispatch(getProductDetails(match.params.id));
-    }, [dispatch, match.params.id]);
+    }, [dispatch, match.params.id,error,alert]);
 
     // if (!product) {
     //     return alert.error(error);
