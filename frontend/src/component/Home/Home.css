@@ -120,6 +120,12 @@
   
     transform: translateY(-1vmax);
   }
+  .productCard > div > span {
+    font-family: "Roboto";
+    font-size: 1.2vmax;
+    margin: 1vmax 0.5vmax;
+    margin-bottom: 0;
+  }
   
 
   @media screen and (max-width: 600px) {
