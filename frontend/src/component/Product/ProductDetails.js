@@ -10,6 +10,7 @@ import ReactStars from  "react-rating-stars-component";
 import Loader from "../layout/Loader/Loader"
 import { useAlert } from "react-alert"
 import ReviewCard from "./ReviewCard.js";
+import MetaData from '../layout/MetaData';
 
 
 const ProductDetails = ({ match }) => {
@@ -41,9 +42,10 @@ const ProductDetails = ({ match }) => {
                 readOnly: true,
             };
             return (
-                <Fragment>
+                <Fragment> 
                     {loading?<Loader/>:
                     <Fragment>
+                    <MetaData title={`${product.name} -- ECOMMERCE`}/>
                 <div className="ProductDetails">
                     <div>
                         <Carousel>
