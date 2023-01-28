@@ -4,13 +4,25 @@ const app=express();
 const cookieParser=require("cookie-parser");
 
 const errorMiddleware=require("./middleware/error");
-
+const cloudinary = require('cloudinary');
+const bodyParser=require("body-parser");
+const fileUpload=require("express-fileupload");
 require("./db/conn");
 
 const port=process.env.PORT || 3002;
 // console.log(process.env.LINK)
 app.use(express.json());
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(fileUpload());
+
+
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
+})
+
 
 //route Imports
 const product =require("./routes/productRoute");
