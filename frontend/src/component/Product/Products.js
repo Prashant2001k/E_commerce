@@ -59,8 +59,15 @@ const Products = ({ match }) => {
     }, [dispatch, keyword, currentPage, price,category,ratings,alert,error])
     
     let count=fliteredProductsCount;
-    // console.log(count+":");
+    // console.log(products);
+    // if(products){
+    //     return (
+        
+    //         <div>dfgdhdfhdhy</div>
+    //     )
+    // }
     return (
+        
         <Fragment>{loading ? <Loader /> :
             <Fragment>
                 <MetaData title="PRODUCTS -- ECOMMERCE"/>
@@ -84,7 +91,7 @@ const Products = ({ match }) => {
                         max={25000}
                     />
                     <Typography>Categories</Typography>
-                    <ul className="categoryBox">
+                    <ul className="categoryBox"> 
                         {categories.map((category) => (
                             <li
                             className="category-link"
@@ -92,7 +99,7 @@ const Products = ({ match }) => {
                             onClick={() => setCategory(category)}
                             >
                             {category}
-                            </li>
+                            </li> 
                         ))}
                     </ul>
 
@@ -122,7 +129,7 @@ const Products = ({ match }) => {
                             prevPageText="Prev"
                             firstPageText="1st"
                             lastPageText="Last"
-                            itemClass='page-item'
+                            itemClass='page-item' 
                             linkClass='page-link'
                             activeClass="pageItemActive"
                             activeLinkClass="pageLinkActive"
@@ -130,7 +137,7 @@ const Products = ({ match }) => {
                     </div>}
 
             </Fragment>
-        }</Fragment>
+        }</Fragment> 
     )
 }
 

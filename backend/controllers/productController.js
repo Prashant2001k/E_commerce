@@ -38,9 +38,8 @@ exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
     //            query,querystr
     const apiFeature = new ApiFeatures(Product.find(), req.query)
     .search()
-    .filter();
-    
-    apiFeature.pagination(resultPerPage);
+    .filter()
+    .pagination(resultPerPage);
     let products = await apiFeature.query;
     
     // apiFeature.pagination(resultPerPage); //not working 
@@ -57,7 +56,7 @@ exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
         products,
         productsCount,
         resultPerPage,
-        fliteredProductsCount,
+        fliteredProductsCount, 
     });
 })
 

@@ -24,7 +24,7 @@ export const getProduct=(keyword="",currentPage=1,price=[0,25000],category,ratin
         dispatch({
             type:ALL_PRODUCT_SUCCESS,
             payload:data,
-        });
+        }); 
         
     }catch(error){
         dispatch({

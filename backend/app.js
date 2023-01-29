@@ -7,6 +7,7 @@ const errorMiddleware=require("./middleware/error");
 const cloudinary = require('cloudinary');
 const bodyParser=require("body-parser");
 const fileUpload=require("express-fileupload");
+const path = require("path");
 require("./db/conn");
 
 const port=process.env.PORT || 3002;
@@ -63,4 +64,7 @@ process.on("unhandledRejection",(err)=>{
 
 const server=app.listen(port,()=>{
     console.log(`successfully Work! on Port : ${port}`);
-})     
+})    
+
+
+// module.exports=app;
