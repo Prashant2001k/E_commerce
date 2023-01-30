@@ -90,8 +90,7 @@ exports.forgetPassword= catchAsyncErrors(async(req,res,next)=>{
     const resetToken= user.getResetPasswordToken();
 
     await user.save({validateBeforeSave:false});
-    
-    const resetPasswordUrl=`${req.protocol}://${req.get("host")}/api/vi/password/reset/${resetToken}`; 
+    const resetPasswordUrl=`${process.env.FRONTEND_URL}/password/reset/${resetToken}`; 
 
     const message=`Your password reset token is :- \n\n ${resetPasswordUrl} \n\n If you have not requested this email then, please ignore it`;
 
@@ -136,8 +135,8 @@ exports.resetPassword=catchAsyncErrors(async(req,res,next)=>{
         return next(new ErrorHander("Reset Password Token is invalide or has been expired", 400));
     }
 
-    if(req.body.password!== req.body.confirmpassword){ 
-        return next(new ErrorHander("Password does not password",400));
+    if(req.body.password!== req.body.confirmPassword){ 
+        return next(new ErrorHander("Password does not Match",400));
     }
 
     user.password=req.body.password;  
@@ -196,8 +195,27 @@ exports.updateProfile= catchAsyncErrors(async(req,res,next)=>{
         email: req.body.email,
     };
 
-    //we will add cloudinary later
+    //we will add cloudinary later-----------------------------
 
+    if (req.body.avatar !== "") {
+        const user = await User.findById(req.user.id);
+    
+        const imageId = user.avatar.public_id;
+    
+        // await cloudinary.v2.uploader.destroy(imageId);
+    
+        // const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+        //   folder: "avatars",
+        //   width: 150,
+        //   crop: "scale",
+        // });
+    
+        // newUserData.avatar = {
+        //   public_id: myCloud.public_id,
+        //   url: myCloud.secure_url,
+        // };
+      }
+  //----------------------------------------------------------
     const user =await User.findByIdAndUpdate(req.user.id,newUserData,{
         new:true,
         runValidators:true,
