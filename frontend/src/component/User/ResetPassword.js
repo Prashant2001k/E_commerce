@@ -18,8 +18,6 @@ const ResetPassword = ({history,match}) => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
-    const [avatar, setAvatar] = useState();  ///profile.webp
-    const [avatarPreview, setAvatarPreview] = useState("/profile.webp");
 const resetPasswordSubmit = (e) => {
         e.preventDefault();
     

@@ -11,12 +11,12 @@ import { useAlert } from "react-alert"
 
 
 
-const product = {
-  name: "Blue Tshirt",
-  images: [{ url: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" }],
-  price: "₹3000",
-  _id: "prashant",
-};
+// const product = {
+//   name: "Blue Tshirt",
+//   images: [{ url: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" }],
+//   price: "₹3000",
+//   _id: "prashant",
+// }; 
 
 
 const Home = () => {

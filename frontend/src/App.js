@@ -1,7 +1,7 @@
 import './App.css';
 import Header from "./component/layout/Header/Header"
 import Footer from "./component/layout/Footer/Footer"
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import {BrowserRouter as Router, Route} from "react-router-dom"
 import WebFont from "webfontloader";
 import {useEffect} from 'react';
 
@@ -20,8 +20,9 @@ import UpdateProfile from './component/User/UpdateProfile.js';
 import UpdatePassword from './component/User/UpdatePassword.js';
 import ForgotPassword from "./component/User/ForgotPassword.js";
 import ResetPassword from "./component/User/ResetPassword.js";
-function App() { 
-
+import Cart from './component/Cart/Cart.js';
+function App() {    
+ 
   const {isAuthenticated,user}=useSelector(state=>state.user);
 //  console.log(isAuthenticated);
   useEffect(()=>{
@@ -51,7 +52,8 @@ function App() {
         <Route exact path="/password/forgot" component={ForgotPassword}/>
         <Route exact path="/password/reset/:token" component={ResetPassword}/>
         <Route exact path="/login" component={LoginSignUp}/>
-        {/* <Route path="/" element={<Home/>}/> */}
+        <Route exact path="/cart" component={Cart}/>
+        {/* <Route path="/" element={<Home/>}/> */}  
       {/* </Switch> */}
       <Footer/>  
     </Router>   

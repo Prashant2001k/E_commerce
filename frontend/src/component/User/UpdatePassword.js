@@ -21,8 +21,6 @@ const UpdatePassword = ({history}) => {
     const [newPassword, setNewPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
-    const [avatar, setAvatar] = useState();  ///profile.webp
-    const [avatarPreview, setAvatarPreview] = useState("/profile.webp");
 const updatePasswordSubmit = (e) => {
         e.preventDefault();
     
