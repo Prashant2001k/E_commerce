@@ -29,10 +29,12 @@ cloudinary.config({
 const product =require("./routes/productRoute");
 const user=require("./routes/userRoute");
 const order=require("./routes/orderRoute");
+const payment=require("./routes/paymentRoute");
 
 app.use("/api/vi",product);
 app.use("/api/vi",user);
 app.use("/api/vi",order);
+app.use("/api/vi",payment);
 
 //Middleware for Error 
 app.use(errorMiddleware);
