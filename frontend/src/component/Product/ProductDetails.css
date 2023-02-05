@@ -141,17 +141,17 @@
     transform: scale(1.1);
   }
   
-  /* .submitDialog {
+  .submitDialog {
     display: flex;
     flex-direction: column;
-  } */
-  /* .submitDialogTextArea {
+  }
+  .submitDialogTextArea {
     border: 1px solid rgba(0, 0, 0, 0.082);
     margin: 1vmax 0;
     outline: none;
     padding: 1rem;
     font: 300 1rem "Roboto";
-  } */
+  }
   
   .reviewsHeading {
     color: #000000be;
@@ -187,14 +187,11 @@
     color: rgba(0, 0, 0, 0.836);
     font: 600 0.9vmax "Roboto";
   }
-  .reviewCard > span{
-    color:rgba(0,0,0,0.0.445);
-    font:300 0.8vmax cursive;
-  }
-  /* .reviewCardComment {
+
+  .reviewCardComment {
     color: rgba(0, 0, 0, 0.445);
     font: 300 0.8vmax cursive;
-  } */
+  }
   
   .noReviews {
     font: 400 1.3vmax "Gill Sans";
@@ -280,10 +277,10 @@
       margin: 3vmax 0;
     }
   
-    /* .reviewCard > p {
+    .reviewCard > p {
       font: 600 3vw "Roboto";
     }
     .reviewCardComment {
       font: 300 5vw cursive;
-    } */
+    }
   }

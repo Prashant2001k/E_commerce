@@ -90,7 +90,7 @@
   .productCard > div {
     margin: 0.5vmax;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: flex-start;
     /* align-items: center; */
   }
@@ -99,7 +99,7 @@
     margin: 0.5vmax;
     font: 300 0.7vmax "Roboto";
   }
-
+  
   .productCard > p {
     font-family: "Roboto";
     font-size: 1.2vmax;
@@ -114,15 +114,18 @@
     font-size: 1vmax;
   }
   
-
+  
   .productCard:hover {
     box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
   
     transform: translateY(-1vmax);
   }
+
   .productCard > div > span {
-    font-family: "Roboto";
-    font-size: 1.2vmax;
+    /* margin: 0.5vmax; */
+    /* font: 300 0.7vmax "Roboto"; */
+     font-family: "Roboto";
+    font-size: 0.9vmax;
     margin: 1vmax 0.5vmax;
     margin-bottom: 0;
   }
