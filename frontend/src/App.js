@@ -30,8 +30,9 @@ import { loadStripe } from "@stripe/stripe-js";
 import OrderSuccess from "./component/Cart/OrderSuccess.js";
 import MyOrders from "./component/Order/MyOrders.js";
 import OrderDetails from "./component/Order/OrderDetails.js";
-import Dashboard from "./component/admin/Dashboard.js";
-
+import Dashboard from "./component/Admin/Dashboard.js";
+import ProductList from "./component/Admin/ProductList.js"
+import NewProduct from './component/Admin/NewProduct';
 
 function App() {    
  
@@ -97,7 +98,9 @@ function App() {
       </Switch>
         <ProtectedRoute isAdmin={true}  exact path="/admin/dashboard" component={Dashboard} />
  
+        <ProtectedRoute isAdmin={true}  exact path="/admin/products" component={ProductList} />
 
+        <ProtectedRoute isAdmin={true}  exact path="/admin/product" component={NewProduct} />
 
         {/* <Route path="/" element={<Home/>}/> */}  
       <Footer/>   
@@ -108,3 +111,4 @@ function App() {
 export default App; 
 
 
+ 
