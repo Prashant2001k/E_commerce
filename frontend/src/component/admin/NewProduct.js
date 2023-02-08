@@ -162,7 +162,7 @@ const NewProduct = ({history}) => {
               onChange={createProductImagesChange}
               multiple
             />
-          </div>
+          </div> 
 
           <div id="createProductFormImage">
             {imagesPreview.map((image, index) => (
@@ -170,7 +170,7 @@ const NewProduct = ({history}) => {
             ))}
           </div>
 
-          <Button
+          <Button 
             id="createProductBtn"
             type="submit"
             disabled={loading ? true : false}

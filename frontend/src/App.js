@@ -33,6 +33,8 @@ import OrderDetails from "./component/Order/OrderDetails.js";
 import Dashboard from "./component/Admin/Dashboard.js";
 import ProductList from "./component/Admin/ProductList.js"
 import NewProduct from './component/Admin/NewProduct';
+import UpdateProduct from './component/Admin/UpdateProduct';
+import OrderList from './component/Admin/OrderList';
 
 function App() {    
  
@@ -45,7 +47,7 @@ function App() {
 
     setStripeApiKey(data.stripeApiKey);
   }
-
+ 
 //  console.log(isAuthenticated);
   useEffect(()=>{
     WebFont.load({
@@ -93,7 +95,7 @@ function App() {
 
         <ProtectedRoute exact path="/order/confirm" component={ConfirmOrder} />
 
-        <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
+        <ProtectedRoute exact path="/order/:id" component={OrderDetails} /> 
 
       </Switch>
         <ProtectedRoute isAdmin={true}  exact path="/admin/dashboard" component={Dashboard} />
@@ -102,6 +104,9 @@ function App() {
 
         <ProtectedRoute isAdmin={true}  exact path="/admin/product" component={NewProduct} />
 
+        <ProtectedRoute isAdmin={true}  exact path="/admin/product/:id" component={UpdateProduct} />
+        
+        <ProtectedRoute isAdmin={true}  exact path="/admin/orders" component={OrderList} />
         {/* <Route path="/" element={<Home/>}/> */}  
       <Footer/>   
     </Router>    

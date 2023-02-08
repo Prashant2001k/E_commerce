@@ -32,7 +32,7 @@ const Products = ({ match }) => {
     const alert =useAlert();
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [price, setPrice] = useState([0, 25000]);
+    const [price, setPrice] = useState([0, 250000]);
     const [category,setCategory]=useState("");
     const [ratings,setRatings]=useState(0);
 
@@ -59,10 +59,11 @@ const Products = ({ match }) => {
     }, [dispatch, keyword, currentPage, price,category,ratings,alert,error])
     
     let count=fliteredProductsCount;
-    // console.log(products);
+    
+    console.log(productsCount);
     // if(products){
     //     return (
-        
+         
     //         <div>dfgdhdfhdhy</div>
     //     )
     // }
