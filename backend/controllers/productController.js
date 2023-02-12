@@ -259,6 +259,7 @@ exports.deleteReview = catchAsyncErrors(async (req, res, next) => {
 
     let ratings = 0;
 
+    
     if (reviews.length === 0) {
       ratings = 0;
     } else {

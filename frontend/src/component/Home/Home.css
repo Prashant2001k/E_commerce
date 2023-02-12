@@ -1,9 +1,9 @@
 .banner{
-    background-image:linear-gradient(to right,#635dc0,#3027ae);
+    background-image:url("../../images/home1.jpg");
     height: 100vmin;
-    /* background-position: center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     display: flex;
     flex-direction: column;
     text-align: center;
