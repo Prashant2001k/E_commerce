@@ -29,7 +29,7 @@ const categories = [
 const Products = ({ match }) => {
     const dispatch = useDispatch();
 
-    const alert =useAlert();
+    const alert =useAlert(); 
 
     const [currentPage, setCurrentPage] = useState(1);
     const [price, setPrice] = useState([0, 250000]);
@@ -87,9 +87,9 @@ const Products = ({ match }) => {
                         value={price}
                         onChange={priceHandler}
                         valueLabelDisplay="auto"
-                        aria-labelledby="range-slider"
+                        aria-labelledby="range-slider" 
                         min={0}
-                        max={25000}
+                        max={250000}
                     />
                     <Typography>Categories</Typography>
                     <ul className="categoryBox"> 

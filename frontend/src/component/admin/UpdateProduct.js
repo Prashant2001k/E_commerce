@@ -28,10 +28,11 @@ const UpdateProduct = ({history,match}) => {
     } = useSelector((state) => state.product);
 
     const { error, product } = useSelector((state) => state.productDetails);
-    console.log(error);
-    console.log(error);
-
-    console.log(product);
+    // console.log(error);
+    // console.log("kkkk"); 
+  
+      // if(product)console.log(product)
+   
   const [name, setName] = useState("p");
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
@@ -41,12 +42,12 @@ const UpdateProduct = ({history,match}) => {
   const [oldImages, setOldImages] = useState([]);
   const [imagesPreview, setImagesPreview] = useState([]);
 
-  
-
+    
+ 
   const categories = [
     "Laptop",
-    "Footwear",
-    "Bottom", 
+    "Footwear", 
+    "Bottom",  
     "Tops",
     "Attire",
     "Camera",
@@ -64,14 +65,14 @@ const UpdateProduct = ({history,match}) => {
     // console.log("dgdgd");
     setName(product.name);
     setDescription(product.description);
-    setPrice(product.price); 
+    setPrice(product.price);  
     setCategory(product.category); 
     setStock(product.Stock); 
     setOldImages(product.images);
   }
 
   if (error) {
-    alert.error(error);
+    alert.error(error); 
     dispatch(clearErrors());
   } 
 
@@ -96,7 +97,7 @@ const UpdateProduct = ({history,match}) => {
   updateError, 
 ]);
 
-if(product)console.log(product);
+// if(product)console.log(product);
 
 const updateProductSubmitHandler = (e) => {
     e.preventDefault();

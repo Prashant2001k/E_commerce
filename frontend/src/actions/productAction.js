@@ -28,13 +28,12 @@ import {
     DELETE_REVIEW_REQUEST,
     DELETE_REVIEW_SUCCESS,
     DELETE_REVIEW_FAIL,
-    DELETE_REVIEW_RESET,
-    CLEAR_ERRORS,
+    CLEAR_ERRORS, 
 } from "../constants/productConstants";
 
 
 //get all products
-export const getProduct=(keyword="",currentPage=1,price=[0,25000],category,ratings=0)=>async(dispatch)=>{
+export const getProduct=(keyword="",currentPage=1,price=[0,250000],category,ratings=0)=>async(dispatch)=>{
     try{
         dispatch({type: ALL_PRODUCT_REQUEST});
 
@@ -147,7 +146,7 @@ export const deleteProduct = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: DELETE_PRODUCT_FAIL,
-      payload: error.response.data.message,
+      payload: error.response.data.message, 
     });
   }
 };

@@ -49,11 +49,11 @@ const Dashboard = () => {
             label: "TOTAL AMOUNT",
             backgroundColor: ["tomato"],
             hoverBackgroundColor: ["rgb(197, 72, 49)"],
-            data: [0, 2000],
+            data: [0, totalAmount],
           },
         ],
       };
-      
+       
       const doughnutState = {
         labels: ["Out of Stock", "InStock"],
         datasets: [

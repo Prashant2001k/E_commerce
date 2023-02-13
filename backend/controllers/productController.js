@@ -52,7 +52,7 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
 //     });
 // }
 exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
-    const resultPerPage = 4;
+    const resultPerPage = 8;
 
     const productsCount = await Product.countDocuments();
    
@@ -62,7 +62,7 @@ exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
     .filter()
     .pagination(resultPerPage);
     let products = await apiFeature.query;
-    
+
     // apiFeature.pagination(resultPerPage); //not working 
     let fliteredProductsCount=products.length;
     // const pro=products;
