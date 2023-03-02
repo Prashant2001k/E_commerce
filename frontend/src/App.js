@@ -25,20 +25,20 @@ import Shipping from "./component/Cart/Shipping.js"
 import ConfirmOrder from "./component/Cart/ConfirmOrder.js";
 import axios from 'axios';
 import Payment from "./component/Cart/Payment.js"
-import { Elements } from "@stripe/react-stripe-js";
+import { Elements } from "@stripe/react-stripe-js"; 
 import { loadStripe } from "@stripe/stripe-js";
 import OrderSuccess from "./component/Cart/OrderSuccess.js";
 import MyOrders from "./component/Order/MyOrders.js";
 import OrderDetails from "./component/Order/OrderDetails.js";
-import Dashboard from "./component/Admin/Dashboard.js";
-import ProductList from "./component/Admin/ProductList.js"
-import NewProduct from './component/Admin/NewProduct';
-import UpdateProduct from './component/Admin/UpdateProduct';
-import OrderList from './component/Admin/OrderList';
-import ProcessOrder from './component/Admin/ProcessOrder';
-import UsersList from './component/Admin/UsersList';
-import UpdateUser from './component/Admin/UpdateUser';
-import ProductReviews from './component/Admin/ProductReviews';
+import Dashboard from "./component/admin/Dashboard.js";
+import ProductList from "./component/admin/ProductList.js"
+import NewProduct from './component/admin/NewProduct';
+import UpdateProduct from './component/admin/UpdateProduct';
+import OrderList from './component/admin/OrderList';
+import ProcessOrder from './component/admin/ProcessOrder';
+import UsersList from './component/admin/UsersList';
+import UpdateUser from './component/admin/UpdateUser';
+import ProductReviews from './component/admin/ProductReviews';
 import About from './component/layout/About/About';
 import Contact from './component/layout/Contact/Contact';
 import NotFound from './component/layout/Not Found/NotFound';
