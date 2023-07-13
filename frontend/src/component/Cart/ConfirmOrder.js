@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 
 
-const ConfirmOrder = ({history}) => {
+const ConfirmOrder = ({history}) => { 
     const { shippingInfo, cartItems } = useSelector((state) => state.cart);
     const { user } = useSelector((state) => state.user);
 

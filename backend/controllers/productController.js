@@ -26,9 +26,9 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
           public_id: result.public_id,
           url: result.secure_url,
         });
-      }
+    }
 
-      req.body.images = imagesLinks;
+    req.body.images = imagesLinks;
     req.body.user = req.user.id;
 
     const product = await Product.create(req.body);
@@ -52,7 +52,7 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
 //     });
 // }
 exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
-    const resultPerPage = 8;
+    const resultPerPage = 2;
 
     const productsCount = await Product.countDocuments();
    
@@ -62,8 +62,8 @@ exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
     .filter()
     .pagination(resultPerPage);
     let products = await apiFeature.query;
-
-    // apiFeature.pagination(resultPerPage); //not working 
+    
+    apiFeature.pagination(resultPerPage); //not working 
     let fliteredProductsCount=products.length;
     // const pro=products;
     // console.log(fliteredProductsCount);

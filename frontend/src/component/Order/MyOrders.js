@@ -50,7 +50,7 @@ const MyOrders = () => {
       {
         field: "actions",
         flex: 0.3,
-        headerName: "Actions",
+        headerName: "Actions", 
         minWidth: 150, 
         type: "number",
         sortable: false,

@@ -13,7 +13,7 @@ import { Country, State } from "country-state-city";
 import { useAlert } from "react-alert";
 import CheckoutSteps from "./CheckoutSteps.js";
 
-const Shipping = ({history}) => {
+const Shipping = ({history}) => { 
     const dispatch = useDispatch();
     const alert = useAlert();
     const { shippingInfo } = useSelector((state) => state.cart);

@@ -58,9 +58,9 @@ const Products = ({ match }) => {
 
     }, [dispatch, keyword, currentPage, price,category,ratings,alert,error])
     
-    let count=fliteredProductsCount;
+    let count=fliteredProductsCount;     
     
-    console.log(productsCount);
+    // console.log(productsCount);
     // if(products){
     //     return (
          
@@ -112,14 +112,14 @@ const Products = ({ match }) => {
                             setRatings(newRating);
                             }}
                             aria-labelledby="continuous-slider"
-                            valueLabelDisplay="auto"
+                            valueLabelDisplay="auto"   
                             min={0}
                             max={5}
                         />
                     </fieldset>
                 </div> 
 
-                {resultPerPage <= productsCount &&
+                {resultPerPage <= productsCount && 
                     <div className='paginationBox'>
                         <Pagination
                             activePage={currentPage}

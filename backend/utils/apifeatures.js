@@ -8,7 +8,7 @@ class ApiFeatures{
         const keyword= this.queryStr.keyword?{
             name:{
                 $regex:this.queryStr.keyword,
-                $options:"i", //case sensetive
+                $options:"i", //case insensetive 
             },
         }:{};
 

@@ -5,13 +5,12 @@ import { Redirect, Route } from "react-router-dom";
 
 const ProtectedRoute = ({ isAdmin, component: Component, ...rest }) => {
   const { loading, isAuthenticated,user} = useSelector((state) => state.user);
-
   return (
-    <Fragment>
+    <Fragment> 
       {loading===false && (
         <Route
           {...rest}
-          render={(props) => {
+          render={(props) => { 
             if (isAuthenticated===false) {
               return <Redirect to="/login" />;
             }

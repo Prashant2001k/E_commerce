@@ -1,7 +1,7 @@
 import React from "react";
 import "./aboutSection.css";
-import { Button, Typography, Avatar } from "@material-ui/core";
-import YouTubeIcon from "@material-ui/icons/YouTube";
+import {Typography, Avatar } from "@material-ui/core";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
 const About = () => {
   const visitInstagram = () => {
@@ -22,31 +22,40 @@ const About = () => {
               alt="Founder"
             />
             <Typography>Prashant Kumar</Typography>
+            <Typography>
+              <h4>Working as a Backend Developer</h4>
+            </Typography>
+            <div>
+              <a href="https://codeforces.com/profile/pkg180901" target="blank">
+                <GitHubIcon className="githubSvgIcon" />
+              </a>
+              &nbsp;&nbsp;
+              <a href="https://codeforces.com/profile/pkg180901" target="blank">
+                <InstagramIcon className="instagramSvgIcon" />
+              </a>
+            </div>
+
+          </div>
+          <div className="aboutSectionContainer2">
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src="https://res.cloudinary.com/dqf75urpt/image/upload/v1676201393/samples/292393717_572613227568467_4128593112564682711_n_custom-1c4747f8862d5f8b3b0137378dc87a2461d63425-s1100-c50_lwxhbg.jpg"
+              src="https://res.cloudinary.com/dqf75urpt/image/upload/v1689261084/IMG_20230713_132437_cnnatm.jpg"
               alt="Founder"
             />
             <Typography>Prince Kumar</Typography>
-            <Button onClick={visitInstagram} color="primary">
-              Visit Instagram
-            </Button>
-            <span>
-              This is a sample wesbite made by prashant Kumar and Prince Kumar. This is a MERN Stack Ecommerce website.
-            </span>
-          </div>
-          <div className="aboutSectionContainer2">
-            <Typography component="h2">Our Brands</Typography>
-            <a
-              href="https://codeforces.com/profile/pkg180901"
-              target="blank"
-            >
-              <YouTubeIcon className="youtubeSvgIcon" />
-            </a>
+            <Typography>
+              <h4>Working as a Frontent Developer</h4>
+            </Typography>
 
-            <a href="https://codeforces.com/profile/pkg180901" target="blank">
-              <InstagramIcon className="instagramSvgIcon" />
-            </a>
+            <div>
+              <a href="https://github.com/aiswalprince07" target="blank">
+                <GitHubIcon className="githubSvgIcon" />
+              </a>
+              &nbsp;&nbsp;
+              <a href="https://www.instagram.com/kumarprince06/" target="blank">
+                <InstagramIcon className="instagramSvgIcon" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

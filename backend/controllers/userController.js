@@ -6,6 +6,7 @@ const sendEmail=require("../utils/sendEmail");
 const crypto= require("crypto");
 const cloudinary=require("cloudinary");
 
+// register user
 exports.registerUser= catchAsyncErrors(async(req,res,next)=>{
 
     const myCloud= await cloudinary.v2.uploader.upload(req.body.avatar,{
@@ -13,8 +14,8 @@ exports.registerUser= catchAsyncErrors(async(req,res,next)=>{
         width:150,
         crop:"scale",
     });
-    console.log(req.body.avatar);
-    const {name,email,password}=req.body;
+    // console.log(req.body.avatar);
+    const {name,email,password}=req.body; 
 
     const user=await User.create({
         name,email,password,
@@ -32,7 +33,7 @@ exports.registerUser= catchAsyncErrors(async(req,res,next)=>{
     // res.status(201).json({
     //     success:true,
     //     token,
-    // });
+    // }); 
 })
 
 
@@ -61,11 +62,10 @@ exports.loginUser=catchAsyncErrors(async(req,res,next)=>{
     sendToken(user,200,res);
 });
 
-
+ 
 
 //Logout User
 exports.logout=catchAsyncErrors(async(req,res,next)=>{
-    // console.log("fff");
     res.cookie("token",null,{
         expires:new Date(Date.now()),
         httpOnly:true,
@@ -97,7 +97,7 @@ exports.forgetPassword= catchAsyncErrors(async(req,res,next)=>{
     try{
         await sendEmail({
             email:user.email,
-            subject:`Ecommerce Password Recovery`,
+            subject:`aapdaRakshak Password Recovery`,
             message,
         });
 
